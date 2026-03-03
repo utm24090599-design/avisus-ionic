@@ -1,0 +1,7 @@
+{
+  "name": "Avisus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
