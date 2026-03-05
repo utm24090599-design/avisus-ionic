@@ -1,0 +1,60 @@
+<main class="flex justify-center items-center w-screen h-screen select-none">
+  <div
+    class="flex relative text-black flex-col md:grid md:place-content-center md:grid-cols-2 md:grid-rows-1 h-[calc(100%/1.1)] md:h-[calc(100%/2)] w-[90%] md:w-auto shadow-2xl rounded-4xl">
+
+    <div
+      class="bg-blue-200 rounded-t-4xl md:rounded-l-4xl md:rounded-tr-none md:w-100 px-5 flex flex-col justify-center items-center pb-5">
+      <h1 class="login-title self-start lg:absolute top-0">Log In</h1>
+      <form class="flex w-full justify-center flex-col gap-4" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div>
+          <label for="email" class="text-xl">Correo:</label>
+          <div class="relative bg-inherit mt-1">
+            <input type="text" id="email" name="email"
+              class="peer bg-transparent h-10 w-full rounded-lg text-gray-800 placeholder-transparent ring-2 px-2 pr-10 ring-gray-500 focus:ring-sky-600 focus:outline-none"
+              placeholder="Correo" autocomplete="off" />
+            <label for="password"
+              class="flex items-center gap-1 absolute cursor-text rounded-2xl left-0 -top-3 text-sm text-gray-500 bg-blue-200 mx-1 px-1 py-0.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                fill="#666666">
+                <path
+                  d="M378-522q-42-42-42-102t42-102q42-42 102-42t102 42q42 42 42 102t-42 102q-42 42-102 42t-102-42ZM192-192v-96q0-23 12.5-43.5T239-366q55-32 116.29-49 61.29-17 124.5-17t124.71 17Q666-398 721-366q22 13 34.5 34t12.5 44v96H192Zm72-72h432v-24q0-5.18-3.03-9.41-3.02-4.24-7.97-6.59-46-28-98-42t-107-14q-55 0-107 14t-98 42q-5 4-8 7.72-3 3.73-3 8.28v24Zm267-309.21q21-21.21 21-51T530.79-675q-21.21-21-51-21T429-674.79q-21 21.21-21 51T429.21-573q21.21 21 51 21T531-573.21ZM480-624Zm0 360Z" />
+              </svg>
+              Contraseña
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="password" class="text-xl">Contraseña:</label>
+          <div class="relative bg-inherit mt-1">
+            <input [type]="mostrarPassword ? 'text' : 'password'" id="password" name="password"
+              class="peer bg-transparent h-10 w-full rounded-lg text-gray-800 placeholder-transparent ring-2 px-2 pr-10 ring-gray-500 focus:ring-sky-600 focus:outline-none"
+              placeholder="Contraseña" autocomplete="off" />
+            <label for="password"
+              class="flex items-center gap-1 absolute cursor-text rounded-2xl left-0 -top-3  text-gray-500 bg-blue-200 mx-1 px-1 py-0.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                fill="#666666">
+                <path
+                  d="M263.72-96Q234-96 213-117.15T192-168v-384q0-29.7 21.15-50.85Q234.3-624 264-624h24v-96q0-79.68 56.23-135.84 56.22-56.16 136-56.16Q560-912 616-855.84q56 56.16 56 135.84v96h24q29.7 0 50.85 21.15Q768-581.7 768-552v384q0 29.7-21.16 50.85Q725.68-96 695.96-96H263.72Zm.28-72h432v-384H264v384Zm267-141.21q21-21.21 21-51T530.79-411q-21.21-21-51-21T429-410.79q-21 21.21-21 51T429.21-309q21.21 21 51 21T531-309.21ZM360-624h240v-96q0-50-35-85t-85-35q-50 0-85 35t-35 85v96Zm-96 456v-384 384Z" />
+              </svg>
+              Contraseña
+            </label>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="absolute w-1/4 md:w-1/8 bottom-7 md:bottom-3 right-3 submit-button text-white bg-green-500 hover:bg-green-600 transition-colors mt-4 rounded-xl py-2 font-bold">
+          Log In
+        </button>
+      </form>
+      <hr class="h-px mt-5 mb-5 bg-black w-full">
+      <p>¿No tienes cuenta? Crea una <span class="text-blue-600 font-bold underline"><a href="register">aquí</a></span>
+      </p>
+    </div>
+
+    <div
+      class="login-image-container w-full min-h-62.5 md:min-h-full h-full overflow-hidden bg-position-[center_top_-5rem] md:bg-center bg-cover rounded-b-4xl md:rounded-bl-none md:rounded-r-4xl">
+    </div>
+  </div>
+</main>
