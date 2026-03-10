@@ -13,23 +13,15 @@
       --shadow:        0 8px 32px rgba(0,0,0,0.12);
     }
 
-
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    
-
-    body {
+    main {
       font-family: var(--font-main);
       background: linear-gradient(135deg, #b8d8ea 0%, #dce8f0 60%, #c9dff0 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;        /* centra verticalmente */
-      justify-content: center;    /* centra horizontalmente */
-      padding: 1.5rem;            /* espacio en móvil para no pegarse a los bordes */
     }
 
 
