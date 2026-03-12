@@ -1,0 +1,23 @@
+<div class="main-container">
+  <div class="news-frame">
+
+    <div class="header-section">
+      <span class="new-label">NEW</span>
+      <div class="search-row">
+        <span class="icon">🔍</span>
+        <span class="main-title">noticias del momento</span>
+        <span class="check">✓</span>
+      </div>
+    </div>
+
+    <div class="news-list">
+      <div *ngFor="let news of newsItems" class="news-card">
+        <p class="news-text">{{ news.title }}</p>
+        <div class="image-box">
+          <img [src]="news.imageUrl" [alt]="news.title">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
