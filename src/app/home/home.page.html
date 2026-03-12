@@ -1,1 +1,21 @@
-<app-dashboard />
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>Avisos</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" scrollY="false">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Avisos</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <div id="container" class="ion-padding">
+        <app-sidebar></app-sidebar>
+        <app-dashboard />
+    </div>
+</ion-content>

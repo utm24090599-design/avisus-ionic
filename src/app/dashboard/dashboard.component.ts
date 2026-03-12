@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CardsComponent } from "../components/cards/cards.component";
 
 @Component({
   selector: 'app-dashboard', // IMPORTANTE: Este es el nombre para el HTML
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'], // Si usas SCSS, cambia la extensión a .scss
-  imports:[CommonModule]
+  imports: [CommonModule, CardsComponent]
 })
 export class DashboardComponent {
   // Datos basados en tu imagen
