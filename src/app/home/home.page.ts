@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton, IonMenu } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton],
+  imports: [CommonModule, DashboardComponent],
 })
 export class HomePage {
   constructor() {}
